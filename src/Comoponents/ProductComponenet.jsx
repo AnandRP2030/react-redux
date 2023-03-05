@@ -13,7 +13,7 @@ const ProductComponenent = () => {
   const imgStyle = {
     margin: "auto",
     width: "240px",
-    height: "284px",
+     height: "284px",
   };
 
   const card = {

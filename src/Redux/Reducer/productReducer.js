@@ -5,15 +5,20 @@ const intialState = {
 };
 
 export const productReducer = (state = intialState, action) => {
-  // if (action.payload){
-  //   console.log(action.payload, 'act')
-
-  // }
   switch (action.type) {
     case ActionTypes.SET_PRODUCTS:
       return { ...state, products: action.payload };
-    case ActionTypes.SELECT_PRODUCTS:
+    default:
       return state;
+  }
+};
+
+export const selectProductReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ActionTypes.SELECT_PRODUCTS:
+      return { ...state, ...action.payload };
+    case ActionTypes.REMOVE_PRODUCTS:
+      return {};
     default:
       return state;
   }
